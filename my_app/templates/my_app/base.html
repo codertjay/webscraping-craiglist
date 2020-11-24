@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <link rel="stylesheet" type="text/css" href="{% static 'my_app/css/bootstrap.min.css' %}">
+
+         <!--font awesome-->
+   <script src="{% static 'my_app/fontsawesome/all.js' %}"></script>
+
+
+{#   navbar#}
+
+<div class="container-fluid nav-wrapper text-light bg-danger " >
+    <a href="/" class="navbar-brand text-light">Codebosslist</a>
+
+    <ul class="navbar-brand ">
+        <li><a href="/">Home</a></li>
+
+  </ul>
+
+</div>
+{#end of nav#}
+
+
+
+{#   beginning of icons#}
+<div class="container-fluid">
+
+<h1 class="d-flex  justify-content-center">What do you want from code boss list?</h1>
+
+<div class="row justify-content-center align-items-center ">
+    <div class="col-4 ">
+{#        promo content goes here#}
+
+        <i class=" fas fa-american-sign-language-interpreting fa-5x text-warning"></i>
+            <p>Fast Code boss web scraper</p>
+            <p class="">Scrape away right here with beautiful GUI</p>
+
+
+    </div>
+
+
+    <div class="col-4">
+{#        promo content goes here#}
+
+        <i class="fas fa-address-card fa-5x text-info"></i>
+            <p>Fast Code boss web scraper</p>
+            <p class="">Scrape away right here with beautiful GUI</p>
+
+
+    </div>
+
+
+    <div class="col-4">
+{#        promo content goes here#}
+
+        <i class="fab fa-apple fa-5x "></i>
+            <p>A much sexiest frontend</p>
+            <p class="">We built with this</p>
+
+
+    </div>
+
+
+</div>
+
+{#   end of icons#}
+
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+            <input type="text" name="search" placeholder="search" class="col-8" ><br>
+
+            <button type="submit" class="btn btn-primary">submit
+                <i class="fab fa-servicestack"></i></button>
+
+        </form>
+            </div>
+</div>
+
+
+{% block contents %}
+{% endblock contents %}
+
+</div>
+
+
+
+
+
+
+<!--bootstrap jquery-->.
+ <script src="{% static 'my_app/js/bootstrap.bundle.min.js'%}"></script>
+<!--Bootstrap js-->
+ <script  src="{% static 'my_app/js/jquery-3.4.1.min.js'%}"></script>
+
+</body>
+</html>

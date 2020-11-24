@@ -1,0 +1,37 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block contents %}
+<div class="container ">
+   <h2 class="d-flex justify-content-center">{{ searches }}</h2>
+    <br>
+    <br>
+    <br>
+
+    {% for post in final_posting %}
+
+{#row#}
+    <div class="row ">
+        <div class="col-md-4 mt-4">
+
+    <div class="card" style="width: 80%;">
+        <a href="{{ post.1 }}"></a><img class="card-img-top" src="{% static 'my_app/img/img12.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+
+        <p class="card-text">Test</p>
+      </div>
+
+      <div class="card-body">
+        <a href="{{ post.1 }}" class="card-link">Viewing listing: price{{ post.2 }}</a>
+      </div>
+    </div>
+
+      </div>
+    </div>
+
+  </div>
+
+        {% endfor %}
+{% endblock contents %}
+
